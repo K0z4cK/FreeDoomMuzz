@@ -1,0 +1,38 @@
+﻿@model Deezer.ViewModels.LoginViewModel
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-login">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2>Log In</h2>
+                            <form method="post" asp-controller="Account" asp-action="Login" role="form">
+
+                                <div asp-validation-summary="ModelOnly"></div>
+                                <div>
+                                    <input type="email" asp-for="Email" class="form-control" placeholder="Email Address" value="">
+                                    <span asp-validation-for="Email"></span>
+                                </div>
+
+                                <div>
+                                    <input type="password" asp-for="Password" class="form-control" placeholder="Password">
+                                    <span asp-validation-for="Password"></span>
+                                </div>
+
+                                <div>
+                                    <div class=" tabs">
+                                        <input type="submit" name="register-submit" class="form-control btn btn-login" value="Log In">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
