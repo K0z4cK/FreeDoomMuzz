@@ -413,6 +413,10 @@ label {
         box-shadow: none;
         border-color: #ccc;
     }
+.errorSpan {
+    text-align: center;
+    color: red;
+}
 
 .btn-login {
     background-color: #E8E9EC;
@@ -464,6 +468,6 @@ label {
 
     .btn-register:hover,
     .btn-register:focus {
-        color:crimson;
+        color : white;
         background-color: #2D3B55;
     }

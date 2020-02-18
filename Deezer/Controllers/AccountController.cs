@@ -48,9 +48,16 @@ namespace Deezer.Controllers
                     UserName = model.UserName,
                     UserProfile = userProfile
                 };
+                if (_userManager.FindByEmailAsync(user.Email).Result != null)
+                {
+                    ModelState.AddModelError(string.Empty, "this Email is registred");
+                    return View(model);
+                }
                 var rolename = "Artist";
                 var result = await _userManager.CreateAsync(user, model.Password);
                 result = _userManager.AddToRoleAsync(user, rolename).Result;
+
+               
                 if (result.Succeeded)
                 {
                     await _signInManager.SignInAsync(user, false);

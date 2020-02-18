@@ -96,3 +96,37 @@ C:\Users\GIGABYTE\Downloads\Deezer (3)\Deezer\obj\Debug\netcoreapp2.1\Deezer.Vie
 C:\Users\GIGABYTE\Downloads\Deezer (3)\Deezer\obj\Debug\netcoreapp2.1\Deezer.dll
 C:\Users\GIGABYTE\Downloads\Deezer (3)\Deezer\obj\Debug\netcoreapp2.1\Deezer.pdb
 C:\Users\GIGABYTE\Downloads\Deezer (3)\Deezer\obj\Debug\netcoreapp2.1\Deezer.csproj.CopyComplete
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\bin\Debug\netcoreapp2.1\Deezer.deps.json
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\bin\Debug\netcoreapp2.1\Deezer.runtimeconfig.json
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\bin\Debug\netcoreapp2.1\Deezer.runtimeconfig.dev.json
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\bin\Debug\netcoreapp2.1\Deezer.dll
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\bin\Debug\netcoreapp2.1\Deezer.pdb
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\bin\Debug\netcoreapp2.1\Deezer.Views.dll
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\bin\Debug\netcoreapp2.1\Deezer.Views.pdb
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Deezer.csprojAssemblyReference.cache
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Deezer.csproj.CoreCompileInputs.cache
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Deezer.RazorAssemblyInfo.cache
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Deezer.RazorAssemblyInfo.cs
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Deezer.AssemblyInfoInputs.cache
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Deezer.AssemblyInfo.cs
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Deezer.TagHelpers.input.cache
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Deezer.TagHelpers.output.cache
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Deezer.RazorCoreGenerate.cache
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.g.cshtml.cs
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.g.cshtml.cs
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Deezer.RazorTargetAssemblyInfo.cache
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Deezer.RazorTargetAssemblyInfo.cs
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Deezer.Views.pdb
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Deezer.dll
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Deezer.pdb
+C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Deezer.csproj.CopyComplete

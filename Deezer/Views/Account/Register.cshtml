@@ -11,35 +11,34 @@
                             <form name="myForm"  method="post" asp-controller="Account" asp-action="Register" role="form" >
 
                                 <div asp-validation-summary="ModelOnly"></div>
-                                <div >
+                                <div class="form-group">
                                     <input type="email" asp-for="Email" class="form-control" placeholder="Email Address" value="">
-                                    <span asp-validation-for="Email"></span>
+                                    <span class="errorSpan" asp-validation-for="Email"></span>
                                 </div>
-                                <div>
+                                <div class="form-group">
                                     <input type="text"  asp-for="FirstName" class="form-control" placeholder="First Name" value="">
-                                    <span asp-validation-for="FirstName"></span>
-                                    <span name="fsfname"></span>
+                                    <span class="errorSpan" asp-validation-for="FirstName"></span>
                                 </div>
-                                <div >
+                                <div class="form-group">
                                     <input type="text"  asp-for="LastName" class="form-control" placeholder="Last Name" value="">
-                                    <span asp-validation-for="LastName"></span>
+                                    <span class="errorSpan" asp-validation-for="LastName"></span>
                                 </div>
-                                <div >
+                                <div class="form-group">
                                     <input type="text"  asp-for="UserName" class="form-control" placeholder="Username" value="">
-                                    <span asp-validation-for="UserName"></span>
+                                    <span class="errorSpan" asp-validation-for="UserName"></span>
                                 </div>
 
-                                <div >
+                                <div class="form-group">
                                     <input type="password"  asp-for="Password" class="form-control" placeholder="Password">
-                                    <span asp-validation-for="Password"></span>
+                                    <span class="errorSpan" asp-validation-for="Password"></span>
                                 </div>
-                                <div >
+                                <div class="form-group">
                                     <input type="password"  asp-for="PasswordConfirm" class="form-control" placeholder="Confirm Password">
-                                    <span asp-validation-for="PasswordConfirm"></span>
+                                    <span class="errorSpan" asp-validation-for="PasswordConfirm"></span>
                                 </div>
-                                <div >
+                                <div class="form-group">
                                     <div class=" tabs">
-                                        <input type="submit" name="register-submit" class="form-control btn btn-register" value="Register">
+                                        <input type="submit" name="register-submit" class="form-control btn btn-register register" value="Register"/>
                                     </div>
                                 </div>
                             </form>
