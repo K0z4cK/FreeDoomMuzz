@@ -115,15 +115,13 @@ namespace Deezer.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<int>("UserProfileId");
-
-                    b.Property<string>("UserProfileId1");
+                    b.Property<string>("UserProfileId");
 
                     b.Property<int>("countOfTrecks");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserProfileId1");
+                    b.HasIndex("UserProfileId");
 
                     b.ToTable("Albums");
                 });
@@ -155,9 +153,7 @@ namespace Deezer.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<int>("UserProfileId");
-
-                    b.Property<string>("UserProfileId1");
+                    b.Property<string>("UserProfileId");
 
                     b.HasKey("Id");
 
@@ -165,7 +161,7 @@ namespace Deezer.Migrations
 
                     b.HasIndex("GenreId");
 
-                    b.HasIndex("UserProfileId1");
+                    b.HasIndex("UserProfileId");
 
                     b.ToTable("Trecks");
                 });
@@ -279,7 +275,7 @@ namespace Deezer.Migrations
                 {
                     b.HasOne("Deezer.Data.Models.UserProfile", "UserProfile")
                         .WithMany("Albums")
-                        .HasForeignKey("UserProfileId1");
+                        .HasForeignKey("UserProfileId");
                 });
 
             modelBuilder.Entity("Deezer.Data.Models.Treck", b =>
@@ -296,7 +292,7 @@ namespace Deezer.Migrations
 
                     b.HasOne("Deezer.Data.Models.UserProfile", "UserProfile")
                         .WithMany("Trecks")
-                        .HasForeignKey("UserProfileId1");
+                        .HasForeignKey("UserProfileId");
                 });
 
             modelBuilder.Entity("Deezer.Data.Models.UserProfile", b =>

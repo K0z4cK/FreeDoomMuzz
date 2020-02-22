@@ -17,7 +17,6 @@ namespace Deezer.Data.Models
         public int AlbumId { get; set; }
         virtual public Album Album { get; set; }
 
-        public int UserProfileId { get; set; }
         virtual public UserProfile UserProfile { get; set; }
 
     }
