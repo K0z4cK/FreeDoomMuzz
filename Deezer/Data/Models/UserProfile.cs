@@ -19,5 +19,6 @@ namespace Deezer.Data.Models
         public virtual DbUser User { get; set; }
         public ICollection<Treck> Trecks { get; set; }
         public ICollection<Album> Albums { get; set; }
+        public ICollection<PlayList> PlayLists { get; set; }
     }
 }

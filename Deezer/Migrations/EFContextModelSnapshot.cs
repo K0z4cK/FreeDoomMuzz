@@ -113,7 +113,11 @@ namespace Deezer.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Image");
+
                     b.Property<string>("Name");
+
+                    b.Property<int>("Rate");
 
                     b.Property<string>("UserProfileId");
 
@@ -124,6 +128,26 @@ namespace Deezer.Migrations
                     b.HasIndex("UserProfileId");
 
                     b.ToTable("Albums");
+                });
+
+            modelBuilder.Entity("Deezer.Data.Models.File", b =>
+                {
+                    b.Property<int>("Id");
+
+                    b.Property<string>("Name")
+                        .IsRequired();
+
+                    b.Property<string>("Path")
+                        .IsRequired();
+
+                    b.Property<DateTime>("Registered");
+
+                    b.Property<string>("RegisteredBy")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Files");
                 });
 
             modelBuilder.Entity("Deezer.Data.Models.Genre", b =>
@@ -139,6 +163,46 @@ namespace Deezer.Migrations
                     b.ToTable("Genres");
                 });
 
+            modelBuilder.Entity("Deezer.Data.Models.PlayList", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Image");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("UserProfileId");
+
+                    b.Property<int>("countOfTrecks");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserProfileId");
+
+                    b.ToTable("PlayLists");
+                });
+
+            modelBuilder.Entity("Deezer.Data.Models.PlayListTreck", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("PlayListId");
+
+                    b.Property<int>("TreckId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PlayListId");
+
+                    b.HasIndex("TreckId");
+
+                    b.ToTable("PlayListTrecks");
+                });
+
             modelBuilder.Entity("Deezer.Data.Models.Treck", b =>
                 {
                     b.Property<int>("Id")
@@ -147,11 +211,15 @@ namespace Deezer.Migrations
 
                     b.Property<int>("AlbumId");
 
+                    b.Property<int>("FileId");
+
                     b.Property<int>("GenreId");
 
                     b.Property<string>("Image");
 
                     b.Property<string>("Name");
+
+                    b.Property<int>("Rate");
 
                     b.Property<string>("UserProfileId");
 
@@ -276,6 +344,34 @@ namespace Deezer.Migrations
                     b.HasOne("Deezer.Data.Models.UserProfile", "UserProfile")
                         .WithMany("Albums")
                         .HasForeignKey("UserProfileId");
+                });
+
+            modelBuilder.Entity("Deezer.Data.Models.File", b =>
+                {
+                    b.HasOne("Deezer.Data.Models.Treck", "Treck")
+                        .WithOne("File")
+                        .HasForeignKey("Deezer.Data.Models.File", "Id")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Deezer.Data.Models.PlayList", b =>
+                {
+                    b.HasOne("Deezer.Data.Models.UserProfile", "UserProfile")
+                        .WithMany("PlayLists")
+                        .HasForeignKey("UserProfileId");
+                });
+
+            modelBuilder.Entity("Deezer.Data.Models.PlayListTreck", b =>
+                {
+                    b.HasOne("Deezer.Data.Models.PlayList", "PlayList")
+                        .WithMany("PlayListTrecks")
+                        .HasForeignKey("PlayListId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Deezer.Data.Models.Treck", "Treck")
+                        .WithMany("PlayListTreck")
+                        .HasForeignKey("TreckId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Deezer.Data.Models.Treck", b =>

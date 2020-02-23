@@ -21,6 +21,9 @@ namespace Deezer.Data.Entities
         public virtual DbSet<Treck> Trecks { get; set; }
         public virtual DbSet<Album> Albums { get; set; }
         public virtual DbSet<Genre> Genres { get; set; }
+        public virtual DbSet<PlayList> PlayLists { get; set; }
+        public virtual DbSet<PlayListTreck> PlayListTrecks { get; set; }
+        public virtual DbSet<File> Files { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

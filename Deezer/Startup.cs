@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Deezer.Data.Entities;
+using Deezer.Data.Interfaces;
+using Deezer.Data.Repositories;
 using Deezer.Data.Seed;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
@@ -44,6 +46,15 @@ namespace Deezer
                 .AddEntityFrameworkStores<EFContext>()
                 .AddDefaultTokenProviders();
 
+            services.AddTransient<ITreck, TreckRepository>();
+            services.AddTransient<IAlbums, AlbumRepository>();
+            services.AddTransient<IArtist, ArtistRepository>();
+            services.AddTransient<IGenres, GenreRepository>();
+            services.AddTransient<IFile, FileRepository>();
+
+            services.AddMemoryCache();
+            services.AddSession();
+
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options =>
                 {
@@ -74,6 +85,10 @@ namespace Deezer
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute(
+                    name: "gentefilter",
+                    template: "Treks/{action}/{category?}",
+                    defaults: new { action = "ListTreks" });
             });
         }
     }

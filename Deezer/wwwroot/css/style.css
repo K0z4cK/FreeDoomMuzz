@@ -15,6 +15,11 @@ html, body {
 }
 
 .navbar-nav .nav-text {
+    color: #a8a8a8 !important;
+    font-size: 20px;
+}
+.navbar-nav .nav-text:hover {
+    color: white !important;
     font-size: 20px;
 }
 .navbar-nav .nav-icon {

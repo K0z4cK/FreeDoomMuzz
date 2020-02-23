@@ -2,3 +2,32 @@
     ViewData["Title"] = "Home Page";
 }
 
+<h1>@ViewBag.Title</h1>
+<table class="table table-hover">
+    <tr>
+        <th>
+            №
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Artist
+        </th>
+        <th>
+            Album
+        </th>
+        <th>
+            Play
+        </th>
+    </tr>
+    @{
+        int i = 1;
+        foreach (Treck item in Model.BestTreks)
+        {
+
+            @await Html.PartialAsync("AllTreks", item)
+            ++i;
+        }
+    }
+</table>

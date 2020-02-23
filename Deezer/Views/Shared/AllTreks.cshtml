@@ -1,0 +1,12 @@
+﻿<tr>
+    <th>@Model.Id</th>
+    <td>@Model.Name</td>
+    <td>@Model.UserProfile.User.UserName</td>
+    <td>@Model.Album.Name</td>
+    <td>
+        <audio controls>
+            <source src="@Model.File.Path" type="audio/ogg; codecs=votbis" />
+            <source src="@Model.File.Path" type="audio/mpeg" />
+        </audio>
+    </td>
+</tr>
