@@ -198,3 +198,7 @@ C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\
 C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Deezer.pdb
 C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Deezer.csproj.CopyComplete
 C:\Users\GIGABYTE\Desktop\Programming\MVC\Deezer\Deezer\obj\Debug\netcoreapp2.1\Deezer.csprojAssemblyReference.cache
+C:\Users\user.itstep\Source\Repos\FreeDoomMuzz\Deezer\obj\Debug\netcoreapp2.1\Razor\Views\Music\ListTreks.g.cshtml.cs
+C:\Users\user.itstep\Source\Repos\FreeDoomMuzz\Deezer\obj\Debug\netcoreapp2.1\Razor\Views\Shared\AllTreks.g.cshtml.cs
+C:\Users\user.itstep\Source\Repos\FreeDoomMuzz\Deezer\obj\Debug\netcoreapp2.1\Razor\Views\Account\ForgotPassword.g.cshtml.cs
+C:\Users\user.itstep\Source\Repos\FreeDoomMuzz\Deezer\obj\Debug\netcoreapp2.1\Razor\Views\Account\ChangePassword.g.cshtml.cs

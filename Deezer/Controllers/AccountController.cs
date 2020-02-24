@@ -9,6 +9,7 @@ using Deezer.ViewModels;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -19,12 +20,14 @@ namespace Deezer.Controllers
     {
         private readonly UserManager<DbUser> _userManager;
         private readonly SignInManager<DbUser> _signInManager;
+        private readonly IEmailSender _myEmailSender;
         private readonly EFContext _context;
 
-        public AccountController(UserManager<DbUser> userManager, SignInManager<DbUser> signInManager, EFContext context)
+        public AccountController(UserManager<DbUser> userManager, SignInManager<DbUser> signInManager, IEmailSender myEmailSender, EFContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _myEmailSender = myEmailSender;
             _context = context;
         }
         public IActionResult Register()
@@ -118,9 +121,52 @@ namespace Deezer.Controllers
         {
             return RedirectToAction("Login", "Account");
         }
+        [HttpGet]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var user = _context.Users.FirstOrDefault(u => u.Email == model.Email);
+            if (user == null)
+            {
+                ModelState.AddModelError("", "This Email not registred");
+                return View(model);
+            }
+            //var userName = user.UserProfile.FirstName;
+            await _myEmailSender.SendEmailAsync(model.Email, "ForgotPassword",
+                $"Dear a," +
+                $"<br/>" +
+                $" To change your password " +
+                $"<br/>" +
+                $" You should visit this link <a href=''>change password</a>");
 
-
-
+            return View(model);
+        }
+        [HttpGet]
+        [Route("Account/ChangePassword/{id}")]
+        public IActionResult ChangePassword(string id)
+        {
+            return View();
+        }
+        [HttpPost]
+        
+        public async Task<IActionResult>ChangePassword(ChangePasswordViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+           
+            return View(model);
+        }
+        
 
         [HttpPost]
         public async Task<IActionResult> Logout()

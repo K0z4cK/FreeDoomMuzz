@@ -6,11 +6,13 @@ using Deezer.Data.Entities;
 using Deezer.Data.Interfaces;
 using Deezer.Data.Repositories;
 using Deezer.Data.Seed;
+using Deezer.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -51,6 +53,8 @@ namespace Deezer
             services.AddTransient<IArtist, ArtistRepository>();
             services.AddTransient<IGenres, GenreRepository>();
             services.AddTransient<IFile, FileRepository>();
+            services.AddTransient<IEmailSender, EmailSender>();
+
 
             services.AddMemoryCache();
             services.AddSession();
