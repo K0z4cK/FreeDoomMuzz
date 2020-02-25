@@ -22,7 +22,7 @@ namespace Deezer.Services
 
         public Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
-            return Execute(_configuration.GetValue<string>("EmailGridKey"), subject, htmlMessage, email);
+            return Execute("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", subject, htmlMessage, email);
         }
 
 
@@ -32,7 +32,7 @@ namespace Deezer.Services
             var client = new SendGridClient(apiKey);
             var msg = new SendGridMessage()
             {
-                From = new EmailAddress("kozack_gamer@ukr.net", "KOZACK"),
+                From = new EmailAddress("2003.illya@gmail.com", "KOZACK"),
                 Subject = subject,
                 PlainTextContent = message,
                 HtmlContent = message

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Deezer.Data.Entities;
+using Deezer.Data.Interfaces;
 using Deezer.Data.Models;
 using Deezer.ViewModels;
 using Microsoft.AspNetCore.Authentication;
@@ -21,13 +22,15 @@ namespace Deezer.Controllers
         private readonly UserManager<DbUser> _userManager;
         private readonly SignInManager<DbUser> _signInManager;
         private readonly IEmailSender _myEmailSender;
+        private readonly IUser _myUser;
         private readonly EFContext _context;
 
-        public AccountController(UserManager<DbUser> userManager, SignInManager<DbUser> signInManager, IEmailSender myEmailSender, EFContext context)
+        public AccountController(UserManager<DbUser> userManager, SignInManager<DbUser> signInManager, IEmailSender myEmailSender, IUser myUser, EFContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _myEmailSender = myEmailSender;
+            _myUser = myUser;
             _context = context;
         }
         public IActionResult Register()
@@ -133,19 +136,19 @@ namespace Deezer.Controllers
             {
                 return View(model);
             }
-            var user = _context.Users.FirstOrDefault(u => u.Email == model.Email);
+            var user =_myUser.GetUserByEmail(model.Email);
             if (user == null)
             {
                 ModelState.AddModelError("", "This Email not registred");
                 return View(model);
             }
-            //var userName = user.UserProfile.FirstName;
+            var userName = user.UserProfile.FirstName;
             await _myEmailSender.SendEmailAsync(model.Email, "ForgotPassword",
-                $"Dear a," +
+                $"Dear {userName}," +
                 $"<br/>" +
                 $" To change your password " +
                 $"<br/>" +
-                $" You should visit this link <a href=''>change password</a>");
+                $" You should visit this link <a href='http://localhost:57756/Account/ChangePassword/{user.Id}'>change password</a>");
 
             return View(model);
         }
@@ -155,8 +158,8 @@ namespace Deezer.Controllers
         {
             return View();
         }
+
         [HttpPost]
-        
         public async Task<IActionResult>ChangePassword(ChangePasswordViewModel model)
         {
             if (!ModelState.IsValid)

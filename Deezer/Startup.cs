@@ -53,6 +53,7 @@ namespace Deezer
             services.AddTransient<IArtist, ArtistRepository>();
             services.AddTransient<IGenres, GenreRepository>();
             services.AddTransient<IFile, FileRepository>();
+            services.AddTransient<IUser, UserRepository>();
             services.AddTransient<IEmailSender, EmailSender>();
 
 

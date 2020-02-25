@@ -84,6 +84,20 @@ html, body {
     color: white;
     transition: ease .3s;
 }
+.label-link-txt {
+  
+   
+    padding-bottom: 10px;
+    text-align: right !important;
+    font-family: sans-serif;
+    font-size: .8em;
+    letter-spacing: 1px;
+    color: #cccccc;
+    transition: ease .3s;
+}
+.label-link-txt:hover {
+    color: white;
+}
 
 .input {
     width: 100%;
