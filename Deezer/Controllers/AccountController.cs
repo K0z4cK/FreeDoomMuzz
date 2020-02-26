@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Deezer.Data.Entities;
 using Deezer.Data.Interfaces;
 using Deezer.Data.Models;
+using Deezer.Services;
 using Deezer.ViewModels;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -21,15 +22,13 @@ namespace Deezer.Controllers
     {
         private readonly UserManager<DbUser> _userManager;
         private readonly SignInManager<DbUser> _signInManager;
-        private readonly IEmailSender _myEmailSender;
         private readonly IUser _myUser;
         private readonly EFContext _context;
 
-        public AccountController(UserManager<DbUser> userManager, SignInManager<DbUser> signInManager, IEmailSender myEmailSender, IUser myUser, EFContext context)
+        public AccountController(UserManager<DbUser> userManager, SignInManager<DbUser> signInManager, IUser myUser, EFContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
-            _myEmailSender = myEmailSender;
             _myUser = myUser;
             _context = context;
         }
@@ -142,15 +141,17 @@ namespace Deezer.Controllers
                 ModelState.AddModelError("", "This Email not registred");
                 return View(model);
             }
+            EmailService service = new EmailService();
             var userName = user.UserProfile.FirstName;
-            await _myEmailSender.SendEmailAsync(model.Email, "ForgotPassword",
+            var url = "http://localhost:57756/Account/ChangePassword/"+ user.Id;
+            await service.SendEmailAsync(model.Email, "Forgot Password",
                 $"Dear {userName}," +
                 $"<br/>" +
                 $" To change your password " +
                 $"<br/>" +
-                $" You should visit this link <a href='http://localhost:57756/Account/ChangePassword/{user.Id}'>change password</a>");
+                $" You should visit this link <a href='{url}'>change password</a>");
 
-            return View(model);
+            return RedirectToAction("Index", "Home");
         }
         [HttpGet]
         [Route("Account/ChangePassword/{id}")]
@@ -160,14 +161,23 @@ namespace Deezer.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult>ChangePassword(ChangePasswordViewModel model)
+        [Route("Account/ChangePassword/{id}")]
+        public async Task<IActionResult>ChangePassword(ChangePasswordViewModel model, string id)
         {
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
-           
-            return View(model);
+            var user = _myUser.GetUser(id);
+            if(user == null)
+            {
+                ModelState.AddModelError("", "This User not registred");
+                return View(model);
+            }
+            var hash_password = _userManager.PasswordHasher.HashPassword(user, model.Password);
+            user.PasswordHash = hash_password;
+            var result = await _userManager.UpdateAsync(user);
+            return RedirectToAction("Login", "Account");
         }
         
 

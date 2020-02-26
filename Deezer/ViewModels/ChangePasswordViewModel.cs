@@ -13,7 +13,7 @@ namespace Deezer.ViewModels
         [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)\S{8,20}$", ErrorMessage = "INVALID PASSWORD\n( password should have: at least one lower case, one upper case, one number, one special character )")]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
-        public string NewPassword { get; set; }
+        public string Password { get; set; }
 
 
 
@@ -21,6 +21,6 @@ namespace Deezer.ViewModels
         [Compare("Password", ErrorMessage = "Пароли не совпадают")]
         [DataType(DataType.Password)]
         [Display(Name = "Confirm Password")]
-        public string NewPasswordConfirm { get; set; }
+        public string PasswordConfirm { get; set; }
     }
 }
