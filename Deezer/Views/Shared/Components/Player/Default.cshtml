@@ -1,0 +1,31 @@
+﻿<audio id="cs_audio">
+    <source src="@Model.File.Path" type="audio/ogg; codecs=votbis" />
+    <source src="@Model.File.Path" type="audio/mpeg" />
+</audio>
+<div style="text-align: center;">
+
+    <div id="cs_audioplayer">
+
+        <span style="position: relative;left: 0;float: left;font-size: 0.87em;"><span id="cs_audio_current_time">0:0</span></span>
+
+        <span id="cs_play_pause_btn" style="position: relative;">
+            <i class="far fa-play-circle" id="cs_audio_play"></i>
+            <i class="far fa-pause-circle" id="cs_audio_pause"></i>
+        </span>
+
+        <span id="cs_audio_sound" style="position: relative;right: 5px;float: right;margin-left: 15px;top: -2px;">
+            <i style="vertical-align: middle;font-size: 1.14em;" class="fas fa-volume-down"></i>
+            <div class="cs_volBar" style="height: 6px; width: 65px;background-color: #ccc;display: inline-block;cursor: pointer;">
+                <div class="cs_volume" style="height: 6px;width: 28px;background-color: red;position: absolute;"></div>
+            </div>
+
+        </span>
+        <span id="cs_audio_duration" style="position: relative;right: 0;float: right;padding-left: 10px;font-size: 0.87em;"></span>
+
+        <div class="cs_audio_bar">
+            <div class="cs_audio_bar_now"></div>
+            <div class="cs_audio_bar_loaded"></div>
+        </div>
+
+    </div>
+</div>

@@ -48,8 +48,6 @@ namespace Deezer.Data.Seed
                     UserName = "K0z4cK",
                     UserProfile = userProfile
                 };
-
-
                 UserProfile userProfile1 = new UserProfile
                 {
                     FirstName = "Kurt",
@@ -62,6 +60,21 @@ namespace Deezer.Data.Seed
                     UserName = "Kurty",
                     UserProfile = userProfile1
                 };
+                UserProfile userProfile2 = new UserProfile
+                {
+                    FirstName = "FreeDoom",
+                    LastName = "Muzzz",
+                    RegistrationDate = DateTime.Now
+                };
+                DbUser user2 = new DbUser
+                {
+                    Email = "pluzharasemen@gmail.com",
+                    UserName = "FreeDoomMuzzz",
+                    UserProfile = userProfile
+                };
+
+                var result03 = manager.CreateAsync(user2, "Qwerty-1-3").Result;
+                result03 = manager.AddToRoleAsync(user2, roleName).Result;
                 var result02 = manager.CreateAsync(user1, "Qwerty-1").Result;
                 result02 = manager.AddToRoleAsync(user1, roleName2).Result;
                 var result01 = manager.CreateAsync(user, "Qwerty-1-2").Result;

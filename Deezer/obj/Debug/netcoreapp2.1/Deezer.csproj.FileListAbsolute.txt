@@ -203,3 +203,5 @@ C:\Users\user.itstep\Source\Repos\FreeDoomMuzz\Deezer\obj\Debug\netcoreapp2.1\De
 C:\Users\user.itstep\Source\Repos\FreeDoomMuzz\Deezer\obj\Debug\netcoreapp2.1\Deezer.pdb
 C:\Users\user.itstep\Source\Repos\FreeDoomMuzz\Deezer\obj\Debug\netcoreapp2.1\Deezer.csproj.CopyComplete
 C:\Users\user.itstep\Source\Repos\FreeDoomMuzz\Deezer\obj\Debug\netcoreapp2.1\Deezer.csprojAssemblyReference.cache
+C:\Users\user.itstep\Source\Repos\FreeDoomMuzz\Deezer\obj\Debug\netcoreapp2.1\Razor\Views\Shared\AllPlaylists.g.cshtml.cs
+C:\Users\user.itstep\Source\Repos\FreeDoomMuzz\Deezer\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\Player\Default.g.cshtml.cs
