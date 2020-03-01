@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\GIGABYTE\\Desktop\\Programming\\MVC\\Deezer\\Deezer\\Deezer.csproj": {}
+    "C:\\Users\\GIGABYTE\\Desktop\\Programming\\MVC\\FreeMuzzz\\Deezer\\Deezer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\GIGABYTE\\Desktop\\Programming\\MVC\\Deezer\\Deezer\\Deezer.csproj": {
+    "C:\\Users\\GIGABYTE\\Desktop\\Programming\\MVC\\FreeMuzzz\\Deezer\\Deezer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\GIGABYTE\\Desktop\\Programming\\MVC\\Deezer\\Deezer\\Deezer.csproj",
+        "projectUniqueName": "C:\\Users\\GIGABYTE\\Desktop\\Programming\\MVC\\FreeMuzzz\\Deezer\\Deezer.csproj",
         "projectName": "Deezer",
-        "projectPath": "C:\\Users\\GIGABYTE\\Desktop\\Programming\\MVC\\Deezer\\Deezer\\Deezer.csproj",
+        "projectPath": "C:\\Users\\GIGABYTE\\Desktop\\Programming\\MVC\\FreeMuzzz\\Deezer\\Deezer.csproj",
         "packagesPath": "C:\\Users\\GIGABYTE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\GIGABYTE\\Desktop\\Programming\\MVC\\Deezer\\Deezer\\obj\\",
+        "outputPath": "C:\\Users\\GIGABYTE\\Desktop\\Programming\\MVC\\FreeMuzzz\\Deezer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -64,6 +64,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[2.1.10, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.12.7, )"
             }
           },
           "imports": [

@@ -109,13 +109,9 @@ audio_id.ontimeupdate = function () {
 function playPause() {
     if (audio_id.paused) {
         audio_id.play();
-        // document.getElementById("cs_audio_play").style.display = "none";
-        // document.getElementById("cs_audio_pause").style.display = "inline";
     }
     else {
         audio_id.pause();
-        // document.getElementById("cs_audio_pause").style.display = "none";
-        // document.getElementById("cs_audio_play").style.display = "inline";
     }
 }
 
@@ -298,7 +294,6 @@ function cspd_change_music(music) {
         var measuredTime = new Date(null);
         measuredTime.setSeconds(audio_id.duration); // specify value of SECONDS
         var MHSTime = measuredTime.toISOString().substr(11, 8);
-        // document.getElementById("cs_audio_duration").innerHTML = MHSTime;
 
         var a = MHSTime.split(':'); // split it at the colons
 

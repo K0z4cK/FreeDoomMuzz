@@ -178,7 +178,7 @@ html, body {
     left: 0;
     right: 0;
     text-align: center;
-    background-color: #7d4d71;
+    background-color: #6c6b70;
     padding: 12px;
     padding-top: 4px;
     padding-bottom: 6px;
@@ -195,7 +195,7 @@ html, body {
 }
 
 .cs_audio_bar_loaded {
-    background-color: #44363d;
+    background-color: white;
     width: 0%;
     height: 6px;
     position: absolute;
@@ -203,7 +203,7 @@ html, body {
 }
 
 .cs_audio_bar_now {
-    background-color: lime;
+    background-color: lightgray;
     width: 0%;
     height: 6px;
     position: absolute;

@@ -14,10 +14,11 @@ namespace Deezer.Components
         {
             _player = player;
         }
-        public IViewComponentResult Invoke(int id)
+        public IViewComponentResult Invoke()
         {
-            var treck = _player.GetTreck(id);
+            var treck = _player.GetTreck(1);
             return View(treck);
         }
     }
 }
+

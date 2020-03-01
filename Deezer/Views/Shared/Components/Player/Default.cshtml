@@ -1,5 +1,7 @@
-﻿<audio id="cs_audio">
-    <source src="@Model.File.Path" type="audio/ogg; codecs=votbis" />
+﻿@*<li> <a href="javascript:void(0);" onclick="cspd_change_music('@Model.File.Path');"> 1</a></li>*@
+
+
+<audio id="cs_audio" controls>
     <source src="@Model.File.Path" type="audio/mpeg" />
 </audio>
 <div style="text-align: center;">

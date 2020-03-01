@@ -1,9 +1,8 @@
 ﻿<tr>
     <th>@Model.Id</th>
-    <td>@Model.Name</td>
+    <td> <a href="javascript:void(0);" onclick="cspd_change_music('@Model.File.Path');">@Model.Name</a></td>
     <td>@Model.UserProfile.User.UserName</td>
     <td>@Model.Album.Name</td>
-    <td>@Model.Image</td>
-
+    <td><img src="@Model.Image" style="height: 60px; width: 60px"/> </td>
+     
 </tr>
-
