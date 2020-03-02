@@ -12566,23 +12566,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\GIGABYTE\\.nuget\\packages\\": {},
+    "C:\\Users\\user.itstep\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\GIGABYTE\\Desktop\\Programming\\MVC\\FreeMuzzz\\Deezer\\Deezer.csproj",
+      "projectUniqueName": "C:\\Users\\user.itstep\\Source\\Repos\\FreeDoomMuzz\\Deezer\\Deezer.csproj",
       "projectName": "Deezer",
-      "projectPath": "C:\\Users\\GIGABYTE\\Desktop\\Programming\\MVC\\FreeMuzzz\\Deezer\\Deezer.csproj",
-      "packagesPath": "C:\\Users\\GIGABYTE\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\GIGABYTE\\Desktop\\Programming\\MVC\\FreeMuzzz\\Deezer\\obj\\",
+      "projectPath": "C:\\Users\\user.itstep\\Source\\Repos\\FreeDoomMuzz\\Deezer\\Deezer.csproj",
+      "packagesPath": "C:\\Users\\user.itstep\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user.itstep\\Source\\Repos\\FreeDoomMuzz\\Deezer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\GIGABYTE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user.itstep\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

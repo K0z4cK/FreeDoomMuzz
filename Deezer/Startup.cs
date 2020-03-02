@@ -49,6 +49,7 @@ namespace Deezer
                 .AddDefaultTokenProviders();
 
             services.AddTransient<ITreck, TreckRepository>();
+            services.AddTransient<IPlaylist, PlaylistRepository>();
             services.AddTransient<IAlbums, AlbumRepository>();
             services.AddTransient<IArtist, ArtistRepository>();
             services.AddTransient<IGenres, GenreRepository>();
@@ -92,7 +93,7 @@ namespace Deezer
                     template: "{controller=Home}/{action=Index}/{id?}");
                 routes.MapRoute(
                     name: "gentefilter",
-                    template: "Treks/{action}/{category?}",
+                    template: "Treks/{action}/{genre?}",
                     defaults: new { action = "ListTreks" });
             });
         }

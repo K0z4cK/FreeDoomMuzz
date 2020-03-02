@@ -245,3 +245,4 @@ C:\Users\GIGABYTE\Desktop\Programming\MVC\FreeMuzzz\Deezer\obj\Debug\netcoreapp2
 C:\Users\GIGABYTE\Desktop\Programming\MVC\FreeMuzzz\Deezer\obj\Debug\netcoreapp2.1\Deezer.dll
 C:\Users\GIGABYTE\Desktop\Programming\MVC\FreeMuzzz\Deezer\obj\Debug\netcoreapp2.1\Deezer.pdb
 C:\Users\GIGABYTE\Desktop\Programming\MVC\FreeMuzzz\Deezer\obj\Debug\netcoreapp2.1\Deezer.csproj.CopyComplete
+C:\Users\user.itstep\Source\Repos\FreeDoomMuzz\Deezer\obj\Debug\netcoreapp2.1\Razor\Views\Music\Explore.g.cshtml.cs

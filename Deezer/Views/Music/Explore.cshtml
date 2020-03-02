@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Explore</title>
+</head>
+<body>
+    <h1>@ViewBag.Title</h1>
+    <table class="table table-hover">
+        @{
+            int i = 1;
+            foreach (PlayList item in Model.GetPlaylists)
+            {
+
+                @await Html.PartialAsync("AllPlaylists", item)
+                ++i;
+            }
+        }
+    </table>
+</body>
+</html>

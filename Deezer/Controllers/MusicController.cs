@@ -14,13 +14,15 @@ namespace Deezer.Controllers
     public class MusicController : Controller
     {
         private readonly ITreck _trecks;
+        private readonly IPlaylist _playlists;
         private readonly IGenres _genres;
         private readonly IAlbums _albums;
         private readonly IArtist _artist;
 
-        public MusicController(ITreck trecks, IGenres genres, IAlbums albums, IArtist artist)
+        public MusicController(ITreck trecks, IPlaylist playlists,IGenres genres, IAlbums albums, IArtist artist)
         {
             _trecks = trecks;
+            _playlists = playlists;
             _genres = genres;
             _albums = albums;
             _artist = artist;
@@ -53,14 +55,28 @@ namespace Deezer.Controllers
             };
 
             return View(treckObj);
-            //ViewBag.Title = "All Cars";
-            //CarListViewModel obj = new CarListViewModel();
-            //obj.GetCars = _cars.GetCars;
-            //obj.CarCategory = "Electricity";
-            ////var cars = _cars.GetCars;
-            ////return View(cars);
-            //return View(obj);
-            //return View();
+
+        }
+        [Route("Music/Explore")]
+        public ViewResult Explore(string category)
+        {
+            //var info = HttpContext.Session.GetString("SessionUser");
+            //if (info != null)
+            //{
+            //    var result = JsonConvert.DeserializeObject<UserInfo>(info);
+            //}
+            IEnumerable<PlayList> playlists = null;
+            if (string.IsNullOrEmpty(category))
+            {
+                playlists = _playlists.GetPlaylists.OrderBy(t => t.Id);
+            }
+            var treckObj = new PlayListsViewModel
+            {
+                GetPlaylists = playlists,
+            };
+
+            return View(treckObj);
+
         }
     }
 }

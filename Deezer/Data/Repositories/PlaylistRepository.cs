@@ -16,16 +16,16 @@ namespace Deezer.Data.Repositories
         {
             _context = context;
         }
-        public IEnumerable<PlayList> GetPlaylists { get { return _context.PlayLists.Include(x => x.UserProfile); } set { } }
+        public IEnumerable<PlayList> GetPlaylists { get { return _context.PlayLists.Include(x => x.UserProfile).Include(x=> x.PlayListTrecks); } set { } }
 
         public PlayList GetPlaylist(int id)
         {
-            return _context.PlayLists.FirstOrDefault(x => x.Id == id);
+            return _context.PlayLists.Include(x => x.UserProfile).Include(x => x.PlayListTrecks).FirstOrDefault(x => x.Id == id);
         }
 
         public IEnumerable<PlayList> GetPlaylistsByArtist(string artistId)
         {
-            return _context.PlayLists.Include(x => x.UserProfile.Id == artistId);
+            return _context.PlayLists.Include(x => x.UserProfile).Include(x => x.PlayListTrecks).Where(x=> x.UserProfile.Id == artistId);
         }
     }
 }
