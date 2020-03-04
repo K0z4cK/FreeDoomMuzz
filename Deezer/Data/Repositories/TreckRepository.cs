@@ -30,7 +30,6 @@ namespace Deezer.Data.Repositories
         {
             return _context.Trecks.Where(x=>x.AlbumId == albumId).Include(x => x.Genre).Include(x => x.UserProfile).Include(x => x.UserProfile.User).Include(x => x.Album).Include(x => x.File);
         }
-
         public IEnumerable<Treck> GetTrecksByArtist(string artistId)
         {
             return _context.Trecks.Where(x => x.UserProfileId == artistId).Include(x => x.Genre).Include(x => x.UserProfile).Include(x => x.UserProfile.User).Include(x => x.Album).Include(x => x.File);

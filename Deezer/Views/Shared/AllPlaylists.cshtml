@@ -1,5 +1,16 @@
-﻿<div>
-    <h3>@Model.Name</h3>
-    <img src="@Model.Image" style="height: 60px; width: 60px" />
-    <p>@Model.countOfTrecks</p>
-</div>
+﻿<article class="card">
+    <a asp-area="" asp-controller="Music" asp-action="GetPlaylist{@Model.Id}" class="card__link">
+        <img src="@Model.Image" class="table_image" />
+        <div class="card__header">
+            <h3 class="card__header-title">@Model.Name</h3>
+            <p class="card__header-meta">Tracks: @Model.countOfTrecks</p>
+            <div class="card__header-icon">
+                <svg viewbox="0 0 28 25">
+                    <path fill="#fff" d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z" />
+                </svg>
+            </div>
+        </div>
+    </a>
+</article>
+
+

@@ -20,7 +20,7 @@ namespace Deezer.Data.Repositories
 
         public PlayList GetPlaylist(int id)
         {
-            return _context.PlayLists.Include(x => x.UserProfile).Include(x => x.PlayListTrecks).FirstOrDefault(x => x.Id == id);
+            return _context.PlayLists.Include(x => x.UserProfile).Include(x => x.PlayListTrecks).Include(x => x.PlayListTrecks).FirstOrDefault(x => x.Id == id);
         }
 
         public IEnumerable<PlayList> GetPlaylistsByArtist(string artistId)

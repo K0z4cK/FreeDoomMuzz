@@ -55,10 +55,40 @@ namespace Deezer.Controllers
             };
 
             return View(treckObj);
+        }
+        [Route("Music/GetPlaylist/{id}")]
+        public ViewResult GetPlaylist(int id)
+        {
+            //var info = HttpContext.Session.GetString("SessionUser");
+            //if (info != null)
+            //{
+            //    var result = JsonConvert.DeserializeObject<UserInfo>(info);
+            //}
+            PlayList playList = _playlists.GetPlaylist(id);
+            IEnumerable<Treck> treks = null;
+            string treksGenre = "";
+            foreach (var pltreck in playList.PlayListTrecks)
+                treks.Append(pltreck.Treck);
+            //if (string.IsNullOrEmpty(category))
+            //{
+            //    treks = _trecks.GetTrecks.OrderBy(t => t.Id);
+            //}
+            //else
+            //{
+            //    treks = _trecks.GetTrecks
+            //        .Where(x => x.Genre.GenreName.ToLower() == category.ToLower());
+            //    treksGenre = category;
+            //}
+            var treckObj = new TreckListViewModel
+            {
+                GetTrecks = treks,
+                TreckGenre = treksGenre
+            };
 
+            return View(treckObj);
         }
         [Route("Music/Explore")]
-        public ViewResult Explore(string category)
+        public ViewResult Explore()
         {
             //var info = HttpContext.Session.GetString("SessionUser");
             //if (info != null)
@@ -66,10 +96,7 @@ namespace Deezer.Controllers
             //    var result = JsonConvert.DeserializeObject<UserInfo>(info);
             //}
             IEnumerable<PlayList> playlists = null;
-            if (string.IsNullOrEmpty(category))
-            {
-                playlists = _playlists.GetPlaylists.OrderBy(t => t.Id);
-            }
+            playlists = _playlists.GetPlaylists.OrderBy(t => t.Id);
             var treckObj = new PlayListsViewModel
             {
                 GetPlaylists = playlists,

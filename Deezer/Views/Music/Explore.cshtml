@@ -10,16 +10,18 @@
 </head>
 <body>
     <h1>@ViewBag.Title</h1>
-    <table class="table table-hover">
-        @{
-            int i = 1;
-            foreach (PlayList item in Model.GetPlaylists)
-            {
+        <div class="container explore-container">
+            @{
+                int i = 1;
+                foreach (PlayList item in Model.GetPlaylists)
+                {
 
-                @await Html.PartialAsync("AllPlaylists", item)
-                ++i;
+                    @await Html.PartialAsync("AllPlaylists", item)
+                    ++i;
+                }
+
             }
-        }
-    </table>
+        </div>
+
 </body>
 </html>
