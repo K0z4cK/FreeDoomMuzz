@@ -23,7 +23,7 @@ namespace Deezer.Data.Repositories
         }
         public IEnumerable<Treck> GetBestTrecks
         {
-            get { return _context.Trecks.Where(t => t.Rate >= 8).Include(x => x.Genre).Include(x => x.UserProfile).Include(x => x.UserProfile.User).Include(x => x.Album).Include(x => x.File); }
+            get { return _context.Trecks.Where(t => t.Rate >= 9).Include(x => x.Genre).Include(x => x.UserProfile).Include(x => x.UserProfile.User).Include(x => x.Album).Include(x => x.File); }
             set { }
         }
         public IEnumerable<Treck> GetTrecksByAlbum(int albumId)
