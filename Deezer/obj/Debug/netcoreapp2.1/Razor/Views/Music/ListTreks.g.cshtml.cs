@@ -65,7 +65,7 @@ using Deezer.Data.Models;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(59, 104, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5fc9975a488f4beca7e1f3bca37eee5e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92be93931fd84c44a333e9635170235a", async() => {
                 BeginContext(65, 91, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>ListTreks</title>\r\n");
                 EndContext();
@@ -85,7 +85,7 @@ using Deezer.Data.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(165, 576, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a94cbd0f3eb84e6c89f7fc37b3e93607", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "99ebf36b141841ac91272668e8294271", async() => {
                 BeginContext(171, 10, true);
                 WriteLiteral("\r\n    <h1>");
                 EndContext();

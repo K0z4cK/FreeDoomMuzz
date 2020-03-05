@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Deezer.Data.Interfaces
 {
-    public interface IPlaylistTreck
+    public interface IPlaylist
     {
-        IEnumerable<PlayListTreck> GetPlaylistTrecks { get; set; }
-        PlayListTreck GetPlaylistTreck(int id);
+        IEnumerable<PlayList> GetPlaylists { get; set; }
+        IEnumerable<PlayList> GetPlaylistsByArtist(string artistId);
+        PlayList GetPlaylist(int id);
     }
 }

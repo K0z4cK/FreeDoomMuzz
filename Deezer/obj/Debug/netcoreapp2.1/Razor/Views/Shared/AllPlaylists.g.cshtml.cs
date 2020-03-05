@@ -61,7 +61,7 @@ using Deezer.Data.Models;
             WriteLiteral("<article class=\"card\">\r\n    ");
             EndContext();
             BeginContext(28, 609, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9fe8dcf959f8458ead44dac71b4fc38c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "19e68ae8827e428eb90122cc53da259d", async() => {
                 BeginContext(121, 14, true);
                 WriteLiteral("\r\n        <img");
                 EndContext();

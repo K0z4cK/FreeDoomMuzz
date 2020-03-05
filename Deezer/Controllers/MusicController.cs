@@ -15,14 +15,16 @@ namespace Deezer.Controllers
     {
         private readonly ITreck _trecks;
         private readonly IPlaylist _playlists;
+        private readonly IPlaylistTreck _playlistsTreck;
         private readonly IGenres _genres;
         private readonly IAlbums _albums;
         private readonly IArtist _artist;
 
-        public MusicController(ITreck trecks, IPlaylist playlists,IGenres genres, IAlbums albums, IArtist artist)
+        public MusicController(ITreck trecks, IPlaylist playlists, IPlaylistTreck playlistsTreck,IGenres genres, IAlbums albums, IArtist artist)
         {
             _trecks = trecks;
             _playlists = playlists;
+            _playlistsTreck = playlistsTreck;
             _genres = genres;
             _albums = albums;
             _artist = artist;
@@ -65,10 +67,12 @@ namespace Deezer.Controllers
             //    var result = JsonConvert.DeserializeObject<UserInfo>(info);
             //}
             PlayList playList = _playlists.GetPlaylist(id);
-            IEnumerable<Treck> treks = null;
+            var plTrecks = _playlistsTreck.GetPlaylistTrecksbyPlayList(id);
+            IEnumerable<Treck> treks = _trecks.GetTrecks.DefaultIfEmpty();
             string treksGenre = "";
-            foreach (var pltreck in playList.PlayListTrecks)
-                treks.Append(pltreck.Treck);
+            foreach (var pltreck in plTrecks)
+                if(pltreck.PlayListId == playList.Id)
+                    treks.Append(_trecks.GetTreck(pltreck.Treck.Id));
             //if (string.IsNullOrEmpty(category))
             //{
             //    treks = _trecks.GetTrecks.OrderBy(t => t.Id);

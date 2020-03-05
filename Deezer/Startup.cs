@@ -50,6 +50,7 @@ namespace Deezer
 
             services.AddTransient<ITreck, TreckRepository>();
             services.AddTransient<IPlaylist, PlaylistRepository>();
+            services.AddTransient<IPlaylistTreck, PlaylistTreckRepositor>();
             services.AddTransient<IAlbums, AlbumRepository>();
             services.AddTransient<IArtist, ArtistRepository>();
             services.AddTransient<IGenres, GenreRepository>();
