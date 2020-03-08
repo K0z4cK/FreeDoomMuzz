@@ -1,5 +1,5 @@
 ﻿<article class="card">
-    <a asp-area="" asp-controller="Music" asp-action="GetPlaylist{@Model.Id}" class="card__link">
+    <a asp-area="" asp-controller="Music" asp-action="GetPlaylist/@Model.Id" class="card__link">
         <img src="@Model.Image" class="table_image" />
         <div class="card__header">
             <h3 class="card__header-title">@Model.Name</h3>

@@ -27,7 +27,7 @@
         </tr>
         @{
             int i = 1;
-            foreach (Treck item in Model.GetPlaylist)
+            foreach (Treck item in Model.GetTrecks)
             {
 
                 @await Html.PartialAsync("AllTreks", item)

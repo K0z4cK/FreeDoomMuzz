@@ -212,7 +212,6 @@ C:\Users\GIGABYTE\Source\Repos\FreeDoomMuzz\Deezer\bin\Debug\netcoreapp2.1\Deeze
 C:\Users\GIGABYTE\Source\Repos\FreeDoomMuzz\Deezer\bin\Debug\netcoreapp2.1\Deezer.pdb
 C:\Users\GIGABYTE\Source\Repos\FreeDoomMuzz\Deezer\bin\Debug\netcoreapp2.1\Deezer.Views.dll
 C:\Users\GIGABYTE\Source\Repos\FreeDoomMuzz\Deezer\bin\Debug\netcoreapp2.1\Deezer.Views.pdb
-C:\Users\GIGABYTE\Source\Repos\FreeDoomMuzz\Deezer\obj\Debug\netcoreapp2.1\Deezer.csprojAssemblyReference.cache
 C:\Users\GIGABYTE\Source\Repos\FreeDoomMuzz\Deezer\obj\Debug\netcoreapp2.1\Deezer.csproj.CoreCompileInputs.cache
 C:\Users\GIGABYTE\Source\Repos\FreeDoomMuzz\Deezer\obj\Debug\netcoreapp2.1\Deezer.RazorAssemblyInfo.cache
 C:\Users\GIGABYTE\Source\Repos\FreeDoomMuzz\Deezer\obj\Debug\netcoreapp2.1\Deezer.RazorAssemblyInfo.cs
@@ -288,3 +287,5 @@ C:\Users\user.itstep\Source\Repos\FreeDoomMuzz\Deezer\obj\Debug\netcoreapp2.1\De
 C:\Users\user.itstep\Source\Repos\FreeDoomMuzz\Deezer\obj\Debug\netcoreapp2.1\Deezer.pdb
 C:\Users\user.itstep\Source\Repos\FreeDoomMuzz\Deezer\obj\Debug\netcoreapp2.1\Deezer.csproj.CopyComplete
 C:\Users\user.itstep\Source\Repos\FreeDoomMuzz\Deezer\obj\Debug\netcoreapp2.1\Deezer.csprojAssemblyReference.cache
+C:\Users\GIGABYTE\Source\Repos\FreeDoomMuzz\Deezer\obj\Debug\netcoreapp2.1\Razor\Views\Music\GetPlaylist.g.cshtml.cs
+C:\Users\GIGABYTE\Source\Repos\FreeDoomMuzz\Deezer\obj\Debug\netcoreapp2.1\Deezer.csprojAssemblyReference.cache

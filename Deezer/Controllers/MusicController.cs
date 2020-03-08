@@ -66,26 +66,19 @@ namespace Deezer.Controllers
             //{
             //    var result = JsonConvert.DeserializeObject<UserInfo>(info);
             //}
-            PlayList playList = _playlists.GetPlaylist(id);
+            //PlayList playList = _playlists.GetPlaylist(id);
             var plTrecks = _playlistsTreck.GetPlaylistTrecksbyPlayList(id);
-            IEnumerable<Treck> treks = _trecks.GetTrecks.DefaultIfEmpty();
+            IEnumerable<Treck> treks = _trecks.GetTrecks;
             string treksGenre = "";
             foreach (var pltreck in plTrecks)
-                if(pltreck.PlayListId == playList.Id)
-                    treks.Append(_trecks.GetTreck(pltreck.Treck.Id));
-            //if (string.IsNullOrEmpty(category))
-            //{
-            //    treks = _trecks.GetTrecks.OrderBy(t => t.Id);
-            //}
-            //else
-            //{
-            //    treks = _trecks.GetTrecks
-            //        .Where(x => x.Genre.GenreName.ToLower() == category.ToLower());
-            //    treksGenre = category;
-            //}
+            {
+                if (pltreck.PlayListId != id)
+                    treks = treks.Where(x => x.Id == pltreck.TreckId);
+                treks = treks.Where(x => x.Id != pltreck.TreckId);
+            }
             var treckObj = new TreckListViewModel
             {
-                GetTrecks = treks,
+                GetTrecks = _trecks.GetTrecks.Except(treks),
                 TreckGenre = treksGenre
             };
 
