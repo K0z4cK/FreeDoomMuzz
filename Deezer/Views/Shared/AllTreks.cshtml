@@ -1,8 +1,9 @@
-﻿<tr>
+﻿<tr class="tracks-table-list">
     <th>@Model.Id</th>
-    <td> <a href="javascript:void(0);" onclick="cspd_change_music('@Model.File.Path');">@Model.Name</a></td>
+    <th class="tracks-table-playbutton "><a href="javascript:void(0);" onclick="cspd_change_music('@Model.File.Path');"><i class="fas fa-play-circle tracks-table-playbutton "></i></a></th>
+    <td> @Model.Name</td>
     <td>@Model.UserProfile.User.UserName</td>
     <td>@Model.Album.Name</td>
-    <td><img src="@Model.Image" style="height: 60px; width: 60px"/> </td>
-     
+    <td><img src="@Model.Image" style="height: 60px; width: 60px" /> </td>
+
 </tr>
