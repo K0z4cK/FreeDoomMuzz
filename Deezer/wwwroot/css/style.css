@@ -305,10 +305,13 @@ svg path:nth-child(3) {
     font-size: 22px;
     color: #bab8b8;
 }
+    .tracks-table-list:hover {
+        background-color: #e6e6e6 !important;
+    }
 .tracks-table-playbutton {
     font-size: 26px;
     color: #bab8b8;
 }
     .tracks-table-playbutton :hover {
-        color: white;
+        color: black;
     }
